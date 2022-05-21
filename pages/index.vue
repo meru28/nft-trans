@@ -1,5 +1,9 @@
 <template>
-  <Tutorial />
+  <div class="w-[300px] bg-slate-500">
+    <h1>
+      base button
+    </h1>
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'

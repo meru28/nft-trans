@@ -1,6 +1,8 @@
 <template>
   <div class="w-[29px]">
-    base button
+    <h1>
+      base button
+    </h1>
   </div>
 </template>
 <script lang="ts">
