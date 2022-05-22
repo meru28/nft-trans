@@ -3,3 +3,64 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/assets/fonts/helveticaneueltstd.otf')  format('truetype')
+}
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url('/assets/fonts/helvetica-bold.ttf')  format('truetype')
+}
+
+.line-heading {
+  background-color: #0b0b0b;
+  width: 50px;
+  height: 7px;
+  border: none;
+}
+
+.line-tab {
+  --tw-bg-opacity: 1;
+  background-color: rgba(226,226,226,var(--tw-bg-opacity));
+  height: 50px;
+  width: 1px;
+}
+
+.tabs-wrapper {
+  @media screen(lg) {
+    max-width: 410px;
+  }
+}
+
+.bg-nav {
+  background-image: url('~/assets/images/Magical_Space_2 1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.password-spy {
+  position: relative;
+}
+.password-spy i {
+  position: absolute;
+  right: 20px;
+  top: 11px;
+  color: #d1d1d1;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.password-spy i.active {
+  color: #3598DC;
+  transition: color 0.2s;
+}
+.password-spy i:hover {
+  color: #999999;
+  transition: color 0.3s;
+}
+
+@layer components {
+  .gradient-pink-purple {
+    @apply bg-gradient-to-br from-[#D02379] to-[#893C8E];
+  }
+}
