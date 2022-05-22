@@ -146,9 +146,11 @@
             <p class="font-bold text-black">Entourage Global</p>
           </div>
         </div>
+        <div class="py-8 text-center">
+          <slider />
+        </div>
       </div>
     </div>
-
     <div
       class="
         py-20
@@ -189,5 +191,8 @@
   </div>
 </template>
 <script lang="ts">
-export default {}
+import Slider from '~/components/Slider.vue'
+export default {
+  components: { Slider },
+}
 </script>
