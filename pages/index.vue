@@ -208,10 +208,11 @@
               <p class="font-bold text-black">Entourage Global</p>
             </div>
           </div>
-          <!-- Sponsor Slider Component  -->
+          <!-- Sponsor Slider Component Start  -->
           <div class="text-center">
             <slider />
           </div>
+          <!-- Sponsor Slider Component  End-->
         </div>
       </div>
     </section>
