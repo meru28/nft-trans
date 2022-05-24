@@ -152,18 +152,20 @@
     </div>
     <!-- section 3 - end -->
     <div class="py-[70px] px-20">
-      <div class="flex space-x-5 border-b-2 border-[#B1B1B1]">
+      <div class="flex space-x-5 border-b-2 border-[#B1B1B1] mb-[76px]">
         <span
           class="
-            text-[#3967EE]
             font-bold
             text-2xl
             w-[158px]
             text-center
             uppercase
             cursor-pointer
-            border-b-4 border-[#3967EE]
           "
+          :class="[
+            !isMenuArtwork ? 'text-[#3967EE] border-b-4 border-[#3967EE]' : '',
+          ]"
+          @click="toggleTabMenu(false)"
           >Traits</span
         >
         <span
@@ -176,10 +178,18 @@
             uppercase
             cursor-pointer
           "
+          :class="[
+            isMenuArtwork ? 'text-[#3967EE] border-b-4 border-[#3967EE]' : '',
+          ]"
+          @click="toggleTabMenu(true)"
           >Artwork</span
         >
       </div>
-      <div class="mt-[76px] grid grid-cols-1 lg:grid-cols-2">
+      <!-- Traits -->
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2"
+        :class="[!isMenuArtwork ? 'block' : 'hidden']"
+      >
         <div class="">
           <div class="flex items-baseline mb-6 cursor-pointer text-black">
             <p class="text-base">
@@ -239,6 +249,38 @@
           <img src="~/assets/images/traits-img.png" alt="" />
         </div>
       </div>
+      <!-- End Traits -->
+      <!-- Artwork -->
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 gap-9"
+        :class="[isMenuArtwork ? 'block' : 'hidden']"
+      >
+        <div class="">
+          <img
+            src="~/assets/images/artwork-img-1.png"
+            alt=""
+            class="mb-[42px] rounded-lg object-fill w-full"
+          />
+          <p class="font-normal text-[1.75rem] text-center">Super Rare</p>
+        </div>
+        <div class="">
+          <img
+            src="~/assets/images/artwork-img-2.png"
+            alt=""
+            class="mb-[42px] rounded-lg object-fill w-full"
+          />
+          <p class="font-normal text-[1.75rem] text-center">Rare</p>
+        </div>
+        <div class="">
+          <img
+            src="~/assets/images/artwork-img-3.png"
+            alt=""
+            class="mb-[42px] rounded-lg object-fill w-full"
+          />
+          <p class="font-normal text-[1.75rem] text-center">Common</p>
+        </div>
+      </div>
+      <!-- End Artwork -->
     </div>
   </div>
 </template>
@@ -250,11 +292,13 @@ export default defineComponent({
   components: { Slider },
   name: 'IndexPage',
   setup() {
-    const section6 = ref(null)
-    const { fetchProvince } = useDaerah()
-    fetchProvince()
+    const isMenuArtwork = ref(false)
+    const toggleTabMenu = (val: boolean) => {
+      isMenuArtwork.value = val
+    }
     return {
-      section6,
+      isMenuArtwork,
+      toggleTabMenu,
     }
   },
 })
