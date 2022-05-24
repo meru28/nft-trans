@@ -18,7 +18,9 @@
         <!-- <i class="icon-vector-1" /> -->
         <img class="lg:mt-16" src="~/assets/images/home-about.svg" />
         <div class="mt-16 lg:mt-0">
-          <h3 class="uppercase font-bold text-[26px] tracking-[.125em] mb-7">
+          <h3
+            class="uppercase font-bold text-[1.625rem] tracking-[.125em] mb-7"
+          >
             About
           </h3>
           <hr class="line-heading mb-7" />
@@ -103,9 +105,7 @@
         </div>
         <div
           class="
-            grid
-            lg:grid-cols-3
-            grid-cols-1
+            flex
             mb-8
             lg:mr-20
             mr-0
@@ -121,17 +121,8 @@
               Bored Ape Yacht Club Creators Just Bought CryptoPunks and Meebits
             </h2>
           </div>
-          <div
-            class="
-              text-white
-              max-w-[564]
-              w-full
-              py-8
-              my-2
-              border-l border-white border-opacity-20
-              px-4
-            "
-          >
+          <div class="w-[4px] bg-white bg-opacity-20 my-2"></div>
+          <div class="text-white max-w-[564] w-full py-8 my-2 px-4">
             <span class="font-normal text-sm font-white mb-5 inline-block">
               MARCH 10,2022
             </span>
@@ -139,17 +130,8 @@
               Bored Ape Yacht Club Creators Just Bought CryptoPunks and Meebits
             </h2>
           </div>
-          <div
-            class="
-              text-white
-              max-w-[564]
-              w-full
-              py-8
-              my-2
-              border-l border-white border-opacity-20
-              pl-9
-            "
-          >
+          <div class="w-[4px] bg-white bg-opacity-20 my-2"></div>
+          <div class="text-white max-w-[564] w-full py-8 my-2 pl-9">
             <span class="font-normal text-sm font-white mb-5 inline-block">
               MARCH 10,2022
             </span>
